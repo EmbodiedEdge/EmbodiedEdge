@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embodied Edge Coaching</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+            color: #334155; /* Darker text */
+        }
+        /* Custom scroll-behavior for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        .program-card {
+            background-color: #ffffff;
+            border-radius: 1rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            padding: 1.5rem; /* p-6 */
+            margin-bottom: 1.5rem; /* mb-6 */
+        }
+        .program-card h3 {
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            margin-bottom: 0.5rem; /* mb-2 */
+            color: #1e293b; /* slate-800 */
+        }
+        .program-card h4 {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 500; /* font-medium */
+            margin-top: 1rem; /* mt-4 */
+            margin-bottom: 0.5rem; /* mb-2 */
+            color: #334155; /* slate-700 */
+        }
+        .program-card ul {
+            list-style: disc;
+            margin-left: 1.25rem; /* ml-5 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        .program-card ul li {
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header and Navigation -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-extrabold text-indigo-700 rounded-lg p-2 hover:bg-indigo-50 transition duration-300">Embodied Edge Coaching</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-700 hover:text-indigo-600 font-medium rounded-lg p-2 hover:bg-gray-100 transition duration-300">About</a>
+                <a href="#who-i-serve" class="text-gray-700 hover:text-indigo-600 font-medium rounded-lg p-2 hover:bg-gray-100 transition duration-300">Who I Serve</a>
+                <a href="#pillars" class="text-gray-700 hover:text-indigo-600 font-medium rounded-lg p-2 hover:bg-gray-100 transition duration-300">Pillars</a>
+                <a href="#programs" class="text-gray-700 hover:text-indigo-600 font-medium rounded-lg p-2 hover:bg-gray-100 transition duration-300">Programs</a>
+                <a href="#contact" class="text-gray-700 hover:text-indigo-600 font-medium rounded-lg p-2 hover:bg-gray-100 transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-md p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300">About</a>
+            <a href="#who-i-serve" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300">Who I Serve</a>
+            <a href="#pillars" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300">Pillars</a>
+            <a href="#programs" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300">Programs</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section id="hero" class="relative bg-gradient-to-r from-indigo-700 to-purple-800 text-white py-20 md:py-32 flex items-center justify-center min-h-screen-75">
+            <div class="container mx-auto px-6 text-center z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">Embodied Edge Coaching</h1>
+                <p class="text-xl md:text-3xl font-light mb-8 animate-fade-in-up delay-100">Elevate Your Performance, Lead Your Life.</p>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-10 animate-fade-in-up delay-200">Unleash Your Peak Performance Across Sport, Business & Life.</p>
+                <a href="#contact" class="inline-block bg-white text-indigo-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition duration-300 ease-in-out animate-fade-in-up delay-300">Schedule Your Discovery Call</a>
+            </div>
+            <!-- Optional: Background overlay for subtle effect -->
+            <div class="absolute inset-0 bg-black opacity-30 z-0"></div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-indigo-800 rounded-lg p-2">Unleash Your Potential</h2>
+                <div class="text-lg leading-relaxed text-gray-700">
+                    <p class="mb-6">Are you ready to transcend perceived limits and achieve peak performance in every facet of your existence – from the boardroom to the athletic arena, and every personal pursuit in between? As a World-Cup Ski Cross athlete with comprehensive expertise in mental performance, nutrition, leadership, and physical optimization, I empower driven individuals to unlock their championship mindset, build unwavering resilience, and cultivate the holistic well-being essential for sustained success.</p>
+                    <p class="mb-6">My coaching is more than just guidance; it’s a partnership rooted in lived experience at the pinnacle of sport. I bring an unparalleled understanding of what it takes to find balance in consistently performing at our best. My integrated approach combines:</p>
+                    <ul class="list-disc list-inside space-y-2 mb-6 ml-5">
+                        <li>The physical discipline of a World Cup athlete</li>
+                        <li>Cutting-edge mental performance strategies</li>
+                        <li>Personalized nutrition insights</li>
+                        <li>Proven leadership principles</li>
+                    </ul>
+                    <p class="text-center font-semibold text-indigo-700">Designed to equip you with the tools to master your performance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who I Serve Section -->
+        <section id="who-i-serve" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-indigo-800 rounded-lg p-2">Who I Serve</h2>
+                <p class="text-lg leading-relaxed text-gray-700 text-center mb-8">I partner with ambitious individuals who are committed to growth and ready to invest in themselves for extraordinary results:</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-3">High-Performing Professionals & Entrepreneurs</h3>
+                        <p class="text-gray-600">Seeking to amplify focus, build resilience, lead with impact, and sustain success without burnout.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-3">Elite & Aspiring Athletes</h3>
+                        <p class="text-gray-600">Ready to break through plateaus, enhance mental toughness, and optimize performance for competition.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-3">Individuals Pursuing Significant Life Goals</h3>
+                        <p class="text-gray-600">Committed to personal mastery, overcoming challenges, and creating a life of purpose and peak vitality.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integrated Coaching Pillars Section -->
+        <section id="pillars" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-indigo-800 rounded-lg p-2">My Integrated Coaching Pillars</h2>
+                <p class="text-lg leading-relaxed text-gray-700 text-center mb-8">Drawing from my unique journey and extensive certifications, my holistic methodology is built upon three interconnected pillars:</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-3">Personal Mastery & Leadership</h3>
+                        <p class="text-gray-600">Cultivate an adaptable mindset, master focus under pressure through profound self-awareness, and lead with greater impact. <span class="font-bold">(ICF-Certified)</span></p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-3">Physical Optimization & Performance Training</h3>
+                        <p class="text-gray-600">Strategic virtual programming to enhance strength, endurance, mobility, and overall physical capacity—custom-designed to your unique ambitions. <span class="font-bold">(ISSA Personal Trainer & CrossFit Certified)</span></p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300">
+                        <h3 class="text-xl font-semibold text-indigo-700 mb-3">Holistic Nutrition for Fuel & Focus</h3>
+                        <p class="text-gray-600">Learn to nourish your body for optimal energy, accelerate recovery, and enhance cognitive function, supporting peak performance in all domains. <span class="font-bold">(ISSA Nutrition Certified)</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coaching Journey - Programs & Packages Section -->
+        <section id="programs" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-indigo-800 rounded-lg p-2">Coaching Journey – Programs & Packages</h2>
+                <p class="text-lg leading-relaxed text-gray-700 text-center mb-12">All programs are delivered virtually, with strategic in-person opportunities for those seeking the ultimate edge.</p>
+
+                <!-- Phase 1: Catalyst for Change -->
+                <div class="program-card mb-12">
+                    <h3 class="text-indigo-800">Phase 1: Catalyst for Change</h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-6">
+                        <!-- Elite Mindset & Performance Kickstart -->
+                        <div class="bg-blue-50 p-6 rounded-xl shadow-inner border border-blue-200">
+                            <h4 class="text-blue-700">A. “Elite Mindset & Performance Kickstart” Package</h4>
+                            <p class="text-gray-700 mb-3"><strong>Ideal for:</strong> Individuals primarily seeking to kickstart their mental game and establish foundational high-performance habits for immediate impact.</p>
+                            <p class="text-gray-700 mb-3"><strong>Duration:</strong> 6 Weeks</p>
+                            <p class="text-gray-700 mb-4"><strong>Focus:</strong> Cultivating a championship mindset, mastering focus, building resilience, and understanding holistic high-performance principles.</p>
+                            <h5 class="text-lg font-semibold text-gray-800 mb-2">What’s Included:</h5>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2 ml-5">
+                                <li>Initial Deep Dive & Goal Setting Session (75–90 min)</li>
+                                <li>5 x 1:1 Virtual Coaching Sessions (60 min each)</li>
+                                <li>Strategic Integration Principles</li>
+                                <li>Personalized Action Plans & Exercises</li>
+                                <li>Dedicated Email Support (within 48 business hours)</li>
+                                <li>Curated Digital Resource Library</li>
+                            </ul>
+                            <p class="text-xl font-bold text-indigo-700 mt-4">Your Investment: $2,500 <span class="text-base font-normal">(Paid in full or two payments of $1,250)</span></p>
+                        </div>
+
+                        <!-- Holistic Physical Optimization -->
+                        <div class="bg-green-50 p-6 rounded-xl shadow-inner border border-green-200">
+                            <h4 class="text-green-700">B. “Holistic Physical Optimization” Program</h4>
+                            <p class="text-gray-700 mb-3"><strong>Ideal for:</strong> Individuals with clear physical performance goals (athletic, body composition, energy) who want personalized training and nutrition integrated with mental resilience coaching.</p>
+                            <p class="text-gray-700 mb-3"><strong>Duration:</strong> 8 Weeks (Initial Commitment)</p>
+                            <p class="text-gray-700 mb-4"><strong>Focus:</strong> Customized virtual physical training, strategic nutrition coaching, and mental strategies for training consistency and pushing boundaries.</p>
+                            <h5 class="text-lg font-semibold text-gray-800 mb-2">What’s Included:</h5>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2 ml-5">
+                                <li>Initial Comprehensive Assessment (90 min)</li>
+                                <li>Customized Virtual Training Program (via professional app)</li>
+                                <li>Weekly 1:1 Virtual Coaching Sessions (30 min each)</li>
+                                <li>Personalized Nutrition Strategy</li>
+                                <li>Ongoing Form Review (via submitted videos)</li>
+                                <li>Priority App Messaging Support (within 24–48 business hours)</li>
+                                <li>[Optional In-Person Add-On]: Ad-hoc “Technique Masterclass” Session (2 hours) at $400 + travel.</li>
+                            </ul>
+                            <p class="text-xl font-bold text-indigo-700 mt-4">Your Investment: $3,000 <span class="text-base font-normal">(Paid in full or two payments of $1,500)</span></p>
+                            <p class="text-sm text-gray-500 mt-2">Post-Program Retainer Option: After 8 weeks, seamlessly continue with ongoing custom programming and coaching support at $1,200/month.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 2: Deep Transformation & Sustained Mastery -->
+                <div class="program-card mb-12">
+                    <h3 class="text-indigo-800">Phase 2: Deep Transformation & Sustained Mastery</h3>
+                    <p class="text-gray-700 mb-6">Once you’ve experienced the power of focused coaching, elevate to a more comprehensive, long-term partnership designed for profound and lasting results.</p>
+                    <div class="bg-purple-50 p-6 rounded-xl shadow-inner border border-purple-200">
+                        <h4 class="text-purple-700">C. “Integrated Performance Mastery” Program</h4>
+                        <p class="text-gray-700 mb-3"><strong>Your Signature 6-Month Commitment</strong></p>
+                        <p class="text-gray-700 mb-3"><strong>Ideal for:</strong> Individuals committed to sustained peak performance across all areas—mental, physical, nutritional, and leadership.</p>
+                        <p class="text-gray-700 mb-4"><strong>Focus:</strong> Comprehensive, integrated optimization for sustained excellence.</p>
+                        <h5 class="text-lg font-semibold text-gray-800 mb-2">What’s Included (Everything from Phase 1, PLUS):</h5>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 ml-5">
+                            <li>1:1 Virtual Coaching Sessions (30/60 min each - weekly or bi-weekly)</li>
+                            <li>Continuous Custom Virtual Performance Training Program</li>
+                            <li>Weekly Virtual Training Check-ins & Detailed Feedback</li>
+                            <li>Advanced Nutrition Integration</li>
+                            <li>Priority Unlimited Email & Messaging Support</li>
+                            <li>Exclusive Access to the “Olympic Mindset” Framework</li>
+                            <li>[Optional In-Person Add-On]: Ad-hoc “Technique Masterclass” Session (2 hours) at $400 + travel.</li>
+                        </ul>
+                        <p class="text-xl font-bold text-indigo-700 mt-4">Your Investment: $3,500/month <span class="text-base font-normal">(Paid monthly for 6 months)</span></p>
+                        <p class="text-sm text-gray-500 mt-2">After six months → Option to continue at $2,000/month (ongoing retainer for maintenance and momentum)</p>
+                    </div>
+                </div>
+
+                <!-- Phase 3: Legacy Builder -->
+                <div class="program-card">
+                    <h3 class="text-indigo-800">Phase 3: Legacy Builder</h3>
+                    <p class="text-gray-700 mb-6">You’ve achieved excellence. Now, let’s craft your legacy. This is for the few who want to transcend performance, influence others, and create enduring impact.</p>
+                    <div class="bg-yellow-50 p-6 rounded-xl shadow-inner border border-yellow-200">
+                        <p class="text-gray-700 mb-3"><strong>Duration:</strong> 12-Month Commitment</p>
+                        <p class="text-gray-700 mb-4"><strong>Focus:</strong> Ultimate mastery, long-term peak performance integration, holistic optimization, and cultivating an enduring legacy.</p>
+                        <h5 class="text-lg font-semibold text-gray-800 mb-2">What’s Included (Everything in Phase 2, PLUS):</h5>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 ml-5">
+                            <li>24 x 1:1 Virtual Coaching Sessions (90 min each - weekly)</li>
+                            <li>Dedicated Weekly Virtual Performance Training Sessions</li>
+                            <li>Unlimited, Immediate Priority Support (via text/phone)</li>
+                            <li>Advanced Leadership & Influence Modules</li>
+                            <li>2 x In-Person VIP Days (Full Day - travel expenses additional)</li>
+                            <li>Curated Network & Resources</li>
+                            <li>Annual Performance Review & Strategic Planning Session</li>
+                        </ul>
+                        <p class="text-xl font-bold text-indigo-700 mt-4">Your Investment: $5,500/month <span class="text-base font-normal">(Paid monthly for 12 months)</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section id="contact" class="py-16 md:py-24 bg-gradient-to-r from-indigo-700 to-purple-800 text-white text-center">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Begin Your Transformation?</h2>
+                <p class="text-lg md:text-xl mb-8">Your journey to peak performance and holistic mastery starts here. Let’s explore how my unique expertise can elevate your game and help you achieve what you once thought impossible.</p>
+                <a href="#" class="inline-block bg-white text-indigo-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition duration-300 ease-in-out">Schedule Your Complimentary Discovery Call</a>
+                <p class="text-sm mt-4 opacity-80">This no-obligation, 15-minute session is an opportunity for us to connect. We’ll discuss your specific goals, current challenges, and explore which coaching pathway is the perfect fit to ignite your potential.</p>
+            </div>
+        </section>
+
+        <!-- About Kris Mahler Section -->
+        <section id="about-kris" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-indigo-800 rounded-lg p-2">About Kris Mahler</h2>
+                <div class="text-lg leading-relaxed text-gray-700">
+                    <p class="mb-6">Kris Mahler is a World-Cup Ski Cross athlete, bringing firsthand experience from the pinnacle of elite competition. With certifications as an ICF Mental Performance Coach, ISSA Nutrition & Personal Trainer, Kris offers a truly comprehensive understanding of physical optimization. Kris integrates cutting-edge psychological strategies with proven physical and nutritional methodologies.</p>
+                    <p class="mb-6">Having navigated the extreme pressures and demands of elite sport, Kris deeply understands the mindset, resilience, and discipline required for peak performance. Now, Kris is dedicated to empowering driven individuals like you to apply these same championship principles to achieve extraordinary success in every facet of life.</p>
+                    <p class="text-center font-bold text-indigo-700 text-xl">Embodied Edge Coaching: “Where inner mastery becomes your competitive edge.”</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2025 Embodied Edge Coaching. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
